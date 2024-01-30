@@ -6,10 +6,11 @@ module.exports = {
   handleCreateShortenLink: async (req, res) => {
     const body = req.body;
 
-    console.log('handleCreateShortenLink body: ', body);
+    console.log('handleCreateShortenLink req: ', req);
+    // console.log('handleCreateShortenLink body: ', body);
     // res.render("shortenLink/index");
-
-    return res.redirect("shortenLink");
+    // res.render("index", { req })
+    return res.redirect("/"); // shortenLink
 
   },
 

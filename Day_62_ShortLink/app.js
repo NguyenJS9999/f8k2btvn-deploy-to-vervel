@@ -10,8 +10,8 @@ const flash = require("connect-flash");
 const passport = require("passport");
 
 var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
 const shortenLinkRouter = require("./routes/shorten-link");
+var usersRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
 const { User } = require("./models/index");
 const passportLocal = require("./passports/passport.local");

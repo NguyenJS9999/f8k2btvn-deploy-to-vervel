@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>F8 - Học lập trình để đi làm</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
 
-  </head>
-  <body>
-    <main class="py-3">
-      <div class="container">
-        <div class="row">
-          <div class="col-3">
-            <h3>Menu quản trị</h3>
-            <ul class="nav flex-column">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F8 - Học lập trình để đi làm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 
-              <li class="nav-item">
-                <a href="/" class="nav-link">Tổng quan</a>
-              </li>
+</head>
 
-              <li class="nav-item">
-                <a href="/users" class="nav-link">Quản lý người dùng</a>
-              </li>
-
-              <li class="nav-item">
-                <a href="/roles" class="nav-link">Quản lý vai trò</a>
-              </li>
-
-              <li class="nav-item">
-                <a href="/shorten-link" class="nav-link">Rút gọn liên kết</a>
-              </li>
-
-            </ul>
-          </div>
-          <div class="col-9"><%- body %></div>
+<body>
+  <main class="py-3">
+    <div class="container pt-1">
+      <!--  -->
+      <div class="header-component">
+        <div class="header-nav">
+          <div class="header-nav-item">Chào bạn: <%= req.user.fullname %></div>
+          <div class="header-nav-item"><a href="/auth/logout">Đăng xuất</a></div>
         </div>
       </div>
-    </main>
-  </body>
+      <!--  -->
+      <div class="row">
+        <div class="col-2">
+          <h3>Menu quản trị</h3>
+          <ul class="nav flex-column">
+
+            <li class="nav-item">
+              <a href="/" class="nav-link">Tổng quan</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/users" class="nav-link">Quản lý người dùng</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/roles" class="nav-link">Quản lý vai trò</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/shorten-link" class="nav-link">Rút gọn liên kết</a>
+            </li>
+
+          </ul>
+        </div>
+        <!--  -->
+        <!-- col-10 -->
+        <div class="col-10"><%- body %></div>
+        <!--  -->
+      </div>
+
+
+    </div>
+  </main>
+</body>
+
 </html>
