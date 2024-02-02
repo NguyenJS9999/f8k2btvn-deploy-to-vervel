@@ -2,14 +2,10 @@ var express = require("express");
 var router = express.Router();
 // const sendMail = require("../utils/mail");
 const roleController = require("../controllers/role.controller");
-const shortenLinkController = require("../controllers/shortenLink.controller");
-
-
 const permission = require("../middlewares/permission.middleware");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  console.log('home truyền req');
   res.render("index", { req });
 });
 
@@ -27,14 +23,6 @@ router.post(
   permission("roles.delete"),
   roleController.delete,
 );
-
-/* GET shorten link listing. */
-router.get("/", shortenLinkController.index,  function (req, res, next) {
-  console.log('home truyền req');
-  res.render("index", { req });
-}); // shortenLink.read
-router.post("/", shortenLinkController.handleShortUrl); // shortenLink.read
-
 
 // router.get("/send-mail", async (req, res) => {
 //   const info = await sendMail(

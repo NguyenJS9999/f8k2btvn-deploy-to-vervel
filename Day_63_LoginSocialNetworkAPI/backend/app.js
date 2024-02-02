@@ -10,9 +10,9 @@ const flash = require("connect-flash");
 const passport = require("passport");
 
 var indexRouter = require("./routes/index");
-const shortenLinkRouter = require("./routes/shorten-link");
 var usersRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
+const apiRouter = require("./routes/api");
 const { User } = require("./models/index");
 const passportLocal = require("./passports/passport.local");
 const passportGoogle = require("./passports/passport.google");
@@ -55,14 +55,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+app.use("/api", apiRouter);
 app.use("/auth", guestMiddleware, authRouter);
 app.use(authMiddleware);
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/shorten-link", shortenLinkRouter);
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -78,6 +75,13 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render("error");
+});
+
+app.use((req, res, next) => {
+  // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+  // Hoặc để cho phép tất cả các nguồn:
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
 });
 
 module.exports = app;
