@@ -1,0 +1,73 @@
+.auth-page {
+	// border: 1px solid red;
+	min-width: 100%;
+	width: 100%;
+	min-height: calc( 100vh - 120px );
+	position: relative;
+}
+
+#auth-form {
+	border: 1px solid gray;  max-width: 500px;
+  border-radius: 0.25rem;
+  align-items: center;
+  background-color: white;
+  max-width: 500px;
+  padding: 1rem;
+  text-align: center;
+	position: relative;
+	transform: translate(-50%, 25%);
+	// top: 50%;
+	left: 50%;
+}
+
+.login-form-wrap {
+  border-radius: inherit;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.login-form-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.login-form-inputs {
+  text-align: left;
+  & input {
+    border: 1px solid gray;
+  }
+}
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+.actions {
+  margin: 0 10%;
+  margin-top: 1rem;
+  & button {
+    border-radius: 0.25rem;
+  }
+}
+#auth0 {
+  border: 1px solid orange;
+}
+#github {
+  border: 1px solid green;
+}
+#google {
+  border: 1px solid palevioletred;
+}
+#account {
+  border: 1px solid blue;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}

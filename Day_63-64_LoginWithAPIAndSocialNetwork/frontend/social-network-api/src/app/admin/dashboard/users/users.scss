@@ -1,0 +1,49 @@
+.container {
+	width: 100%;
+}
+.users-pages {
+	border: 1px solid gray;
+	min-height: 4rem;
+}
+
+.users-table {
+	width: 100%;
+}
+
+.users-table-head, .users-table-row {
+	// border: 1px solid blue;
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+
+	& > div {
+		border: 1px solid gray;
+		padding: 1rem 0.25rem;
+		text-align: center;
+	}
+
+}
+
+.user-checkbox {
+	width: 50px;
+}
+.user-name {
+	width: 20%;
+}
+.user-email {
+	// width: 20%;
+	flex: 1;
+}
+.user-action {
+	width: 20%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+
+.users-table-head {
+	// border-top: 1px solid gray;
+	background: rgb(230, 222, 222);
+}
+

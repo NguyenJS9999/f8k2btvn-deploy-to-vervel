@@ -1,0 +1,31 @@
+{
+  "name": "social-network-api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev -p 8080",
+    "start": "next start -p 8080",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@nextui-org/react": "^2.2.9",
+    "axios": "^1.6.7",
+    "bootstrap": "^5.0.1",
+    "framer-motion": "^10.16.5",
+    "next": "14.0.3",
+    "next-themes": "^0.2.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.69.5",
+    "react-redux": "^8.1.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6"
+  }
+}
